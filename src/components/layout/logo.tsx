@@ -1,8 +1,9 @@
+import { JSX } from "react";
 
 
-const Logo = () => {
+const Logo = (): JSX.Element => {
     return (
-        <div><h2 className="text-lg uppercase">Mahmoud's Blog</h2></div>
+        <div><h2 className="text-2xl md:text-3xl uppercase">Mahmoud's Blog</h2></div>
     )
 }
 

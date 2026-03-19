@@ -1,6 +1,7 @@
+import { JSX } from "react";
 
 
-const SelectedPost = () => {
+const SelectedPost = (): JSX.Element => {
     return (
         <div>
             Selected Post Page

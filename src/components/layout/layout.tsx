@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, JSX } from 'react';
 import MainNavigation from './main-navigation';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
     return (
         <Fragment>
             <MainNavigation />

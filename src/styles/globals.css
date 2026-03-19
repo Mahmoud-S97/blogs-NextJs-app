@@ -4,7 +4,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c1c1c;
+  --gradient-main: linear-gradient(to bottom, var(--background), #786b8850);
 }
 
 @theme inline {
@@ -18,6 +19,20 @@
   :root {
     --background: #040021;
     --foreground: #ededed;
+    --gradient-main: linear-gradient(to bottom, var(--background), #3c0085);
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: #d3d3d3;
+  }
+}
+
+@layer utilities {
+  .bg-main-gradient {
+    background: var(--gradient-main);
   }
 }
 

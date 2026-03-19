@@ -1,6 +1,7 @@
+import { JSX } from "react";
 
 
-const ContactPage = () => {
+const ContactPage = (): JSX.Element => {
     return (
         <div>
             Contact Page

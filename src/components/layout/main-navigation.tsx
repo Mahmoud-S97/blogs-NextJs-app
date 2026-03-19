@@ -1,10 +1,11 @@
+import { JSX } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 
 
-const MainNavigation = () => {
+const MainNavigation = (): JSX.Element => {
     return (
-        <header className="w-full h-20 flex justify-between items-center py-2 px-10 md:px-30">
+        <header className="w-full h-20 flex justify-between items-center py-2 px-10 md:px-30 ">
             <Link href='/'>
                 <Logo />
             </Link>
