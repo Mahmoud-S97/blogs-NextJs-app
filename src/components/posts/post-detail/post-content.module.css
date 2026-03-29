@@ -1,0 +1,12 @@
+.article h1 {
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.article a {
+    color: #003fa7;
+}
+
+.article pre:first-of-type {
+    width: 100%
+}

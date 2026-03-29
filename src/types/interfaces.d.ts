@@ -4,7 +4,9 @@ interface Post {
     title: string
     image: string
     excerpt: string
-    date: Date | string
+    date: Date | string,
+    content: string,
+    isFeatured: boolean
 }
 
 interface Posts {
@@ -12,5 +14,5 @@ interface Posts {
 }
 
 interface PostPreview {
-    post: Pick<Post, 'title' | 'image' | 'excerpt' | 'date' | 'slug'>
+    post: Pick<Post, 'title' | 'image' | 'excerpt' | 'date' | 'slug' | 'content' | 'isFeatured'>
 }
