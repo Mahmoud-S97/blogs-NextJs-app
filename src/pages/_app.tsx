@@ -1,10 +1,15 @@
 import Layout from "@/components/layout/layout";
+import AppContextProvider from "@/store/context/AppContext";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { JSX } from "react";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
-  return <Layout>
-    <Component {...pageProps} />
-  </Layout>
+  return (
+    <AppContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AppContextProvider>
+  )
 }

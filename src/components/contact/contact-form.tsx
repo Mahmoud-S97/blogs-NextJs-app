@@ -1,9 +1,12 @@
 import { JSX, useState } from "react";
+import Notification from "../ui/notification";
+import { useApp } from "@/hooks/app/useApp";
 
 
 const ContactForm = (): JSX.Element => {
 
     const [formErrors, setFormErrors] = useState<string | null>(null);
+    const { message, setMessageHandler } = useApp();
 
     const sendMessageHandler = async (event: any) => {
         event.preventDefault();
@@ -29,6 +32,12 @@ const ContactForm = (): JSX.Element => {
 
         if (formErrors) setFormErrors(null);
 
+        setMessageHandler({
+            title: 'Sending message...',
+            body: 'Sending message, please wait for a moment. ',
+            status: 'pending'
+        });
+
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
@@ -40,8 +49,22 @@ const ContactForm = (): JSX.Element => {
 
             const result = await response.json();
 
+            if (!response.ok) {
+                throw new Error((result.error && result.message) || 'Something went wrong, please try again later.');
+            }
+
+            setMessageHandler({
+                title: 'Success!',
+                body: result?.message,
+                status: 'success'
+            });
+
         } catch (error: any) {
-            console.log('Error: ', error);
+            setMessageHandler({
+                title: 'Error!',
+                body: (error && error?.message) || 'Sending message failed!. ',
+                status: 'error'
+            });
         }
     }
 
@@ -70,6 +93,7 @@ const ContactForm = (): JSX.Element => {
                     </div>
                 </form>
             </div>
+            {message && <Notification title={message.title} body={message.body} status={message.status} />}
         </section>
     )
 }

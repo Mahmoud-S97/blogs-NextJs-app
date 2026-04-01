@@ -16,3 +16,10 @@ interface Posts {
 interface PostPreview {
     post: Pick<Post, 'title' | 'image' | 'excerpt' | 'date' | 'slug' | 'content' | 'isFeatured'>
 }
+
+type StatusType = 'pending' | 'success' | 'error' | null;
+interface ResponseUIAlert {
+    title: string;
+    body: string;
+    status: StatusType
+}
