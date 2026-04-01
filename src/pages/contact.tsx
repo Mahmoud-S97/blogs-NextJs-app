@@ -1,12 +1,17 @@
+import Head from "next/head";
+import { Fragment, JSX } from "react";
 import ContactForm from "@/components/contact/contact-form";
-import { JSX } from "react";
 
 
 const ContactPage = (): JSX.Element => {
     return (
-        <div>
+        <Fragment>
+            <Head>
+                <title>Contact Me</title>
+                <meta name='description' content='Send me your messages!' />
+            </Head>
             <ContactForm />
-        </div>
+        </Fragment>
     )
 }
 
