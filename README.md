@@ -1,40 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ✍️ My Front-End Blog
 
-## Getting Started
+A personal blog website built with Next.js and MongoDB where I share content about front-end development, including React, Next.js, and React Native.
 
-First, run the development server:
+The website also includes a contact page where visitors can send messages, which are stored in a MongoDB database.
+
+---
+
+## 🚀 Features
+
+- 📰 Blog posts about front-end development  
+- ⚛️ Topics: React, Next.js, React Native  
+- 📩 Contact form to send messages  
+- 💾 Messages stored in MongoDB  
+- ⚡ Fast and responsive UI  
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <th>### 🏠 Home / Blog Page</th>
+    <th>### 📖 Featured Posts</th>
+    <th>### 📖 All Posts Page</th>
+    <th>### 📖 Blog Post Page</th>
+    <th>### 📩 Contact Page</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./public/images/site/home.png" width="1024" />
+    </td>
+    <td>
+      <img src="./public/images/site/featured.png" width="1024" />
+    </td>
+    <td>
+      <img src="./public/images/site/posts.png" width="1024" />
+    </td>
+    <td>
+      <img src="./public/images/site/post.png" width="1024" />
+    </td>
+    <td>
+      <img src="./public/images/site/contact.png" width="1024" />
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📁 Project Structure
+
+- pages/index.tsx → Blog homepage
+- pages/posts/index.tsx → Blog posts page
+- pages/posts/[slug].tsx → Blog single post page
+- pages/contact.tsx → Contact form page
+- pages/api/ → API routes (contact handling) & MongoDB connection.
+
+## 🔌 API
+
+- POST /api/contact → Save a new message.
+
+---
+
+## 🌐 Environment Variables
+
+Create a .env file:
+
+```env
+MONGO_DB_URL=your_mongodb_connection_string
+MONGO_DB_NAME=your_moongodb_database_name
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 Deployment
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project is deployed using Vercel.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Push to GitHub
+- Import project into Vercel
+- Add environment variables
+- Deploy
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Next.js
+- React
+- MongoDB
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✨ About
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This project is a personal space where I:
+
+- Share what worthes to be shared in front-end development
+- Encourage Juniors/Mid level developers in building front-end & full-stack features
+- Experiment with modern web technologies
+
+💙 Author
+
+Mahmoud Saleh
+
+Senior Front-End Developer
