@@ -31,7 +31,11 @@ export const AppContextProvider = ({ children }: { children: React.ReactNode }) 
     useEffect(() => {
         if (!message) return;
 
-        const timeout = setTimeout(() => setMessageHandler(null), 5000); // 5 sec
+        const timeout = setTimeout(() => {
+            if (message.status === 'success' || message.status === 'error') {
+                setMessageHandler(null);
+            }
+        }, 5000); // 5 sec
 
         return () => clearTimeout(timeout);
     }, [message]);
